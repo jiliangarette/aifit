@@ -3,19 +3,19 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
     {
         path: "/",
-        component: () => import("@/pages/Home.vue"),
+        component: () => import("@/pages/HomePage.vue"),
     },
     {
         path: "/about",
-        component: () => import("@/pages/About.vue"),
+        component: () => import("@/pages/AboutPage.vue"),
     },
     {
         path: "/recipe",
-        component: () => import("@/pages/Recipe.vue"),
+        component: () => import("@/pages/RecipePage.vue"),
     },
     {
         path: "/community",
-        component: () => import("@/pages/Community.vue"),
+        component: () => import("@/pages/CommunityPage.vue"),
     },
 ];
 
