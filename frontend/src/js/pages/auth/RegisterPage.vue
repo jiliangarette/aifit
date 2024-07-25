@@ -12,8 +12,6 @@ import MainLayout from "@/layout/MainLayout.vue";
                         <v-col cols="12" >
                             <v-text-field
                                 v-model="name"
-                                :counter="10"
-                                :rules="nameRules"
                                 label="Name"
                                 hide-details
                                 required
