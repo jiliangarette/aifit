@@ -25,6 +25,10 @@ const routes = [
         path: "/login",
         component: () => import("@/pages/auth/LoginPage.vue"),
     },
+    {
+        path: "/favorite",
+        component: () => import("@/pages/food/FavoriteRecipes.vue"),
+    },
     
 ];
 
