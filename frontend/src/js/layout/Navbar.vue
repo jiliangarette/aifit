@@ -31,12 +31,12 @@
                                 <router-link to="/register"
                                     class="text-teal-accent-4 underline-none font-weight-bold text-decoration-none">
                                     <v-list-item
-                                        class="text-h6 text-teal-accent-4 underline-none font-weight-semibold text-decoration-none pt-4 mx-2"
+                                        class="text-h6 text-teal-accent-4 underline-none font-weight-semibold text-decoration-none pt-4 mx-3"
                                         title="Register"></v-list-item>
                                 </router-link> <router-link to="/login"
                                     class="text-teal-accent-4 underline-none font-weight-bold text-decoration-none">
                                     <v-list-item
-                                        class="text-h6 text-teal-accent-4 underline-none font-weight-semibold text-decoration-none pt-4 mx-2"
+                                        class="text-h6 text-teal-accent-4 underline-none font-weight-semibold text-decoration-none pt-4 mx-3"
                                         title="Login"></v-list-item>
                                 </router-link>
                                 <v-list-item min-height="24"> </v-list-item>
