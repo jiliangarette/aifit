@@ -17,6 +17,15 @@ const routes = [
         path: "/community",
         component: () => import("@/pages/CommunityPage.vue"),
     },
+    {
+        path: "/register",
+        component: () => import("@/pages/auth/RegisterPage.vue"),
+    },
+    {
+        path: "/login",
+        component: () => import("@/pages/auth/LoginPage.vue"),
+    },
+    
 ];
 
 export default createRouter({
