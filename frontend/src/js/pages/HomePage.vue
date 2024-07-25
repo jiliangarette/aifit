@@ -1,7 +1,7 @@
 <template>
     <MainLayout>
         <HomeView />
-        <!-- <CalculatorForm/> -->
+        <!-- <CalculatorForm /> -->
     </MainLayout>
 </template>
 
@@ -9,6 +9,6 @@
 
 import MainLayout from "@/layout/MainLayout.vue";
 import HomeView from "@/components/HomeView.vue";
-import CalculatorForm from "../components/CalculatorForm.vue";
+// import CalculatorForm from "../components/CalculatorForm.vue";
 
 </script>
