@@ -10,7 +10,7 @@
                 <router-link to="/" class="text-white font-weight-semibold text-decoration-none">Home</router-link>
             </v-list-item-content>
             <v-list-item-content class="mx-6">
-                <router-link to="/recipe"
+                <router-link to="/recipe/favorite"
                     class="text-white font-weight-semibold text-decoration-none">Recipe</router-link>
             </v-list-item-content>
             <v-list-item-content class="mx-6">
@@ -51,5 +51,10 @@
     </v-container>
 </template>
 <script setup>
-    import { CircleUser } from "lucide-vue-next";
+import { CircleUser } from "lucide-vue-next";
 </script>
+<style scoped>
+.aifit-active {
+    font-weight: bold;
+}
+</style>

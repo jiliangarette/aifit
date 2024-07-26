@@ -1,4 +1,3 @@
-
 <script setup>
 import MainLayout from '@/layout/MainLayout.vue'
 import { ref } from 'vue'
@@ -15,24 +14,6 @@ const form = ref({
 })
 const valid = ref(true)
 const error = ref(null)
-
-<template>
-    <MainLayout>
-        <div class="h-screen d-flex justify-center">
-
-            <v-form v-model="valid" class="pa-10 py-5 w-50 ">
-                <v-container class="border-sm spacing-playground pa-6 ">
-                    <h1>Register</h1>
-                    <v-col >
-                        <v-col cols="12" >
-                            <v-text-field
-                                v-model="name"
-                                label="Name"
-                                hide-details
-                                required
-                            ></v-text-field>
-                        </v-col>
-
 
 const register = async () => {
   try {
@@ -60,45 +41,22 @@ const register = async () => {
           <h1>Register</h1>
           <v-col>
             <v-col cols="12">
-              <v-text-field
-                v-model="form.name"
-                :rules="nameRules"
-                label="Name"
-                hide-details
-                required
-              ></v-text-field>
+              <v-text-field v-model="form.name" :rules="nameRules" label="Name" hide-details required></v-text-field>
             </v-col>
 
             <v-col cols="12">
-              <v-text-field
-                v-model="form.email"
-                :rules="emailRules"
-                label="E-mail"
-                hide-details
-                required
-              ></v-text-field>
+              <v-text-field v-model="form.email" :rules="emailRules" label="E-mail" hide-details
+                required></v-text-field>
             </v-col>
 
             <v-col cols="12">
-              <v-text-field
-                v-model="form.password"
-                :rules="passwordRules"
-                label="Password"
-                type="password"
-                hide-details
-                required
-              ></v-text-field>
+              <v-text-field v-model="form.password" :rules="passwordRules" label="Password" type="password" hide-details
+                required></v-text-field>
             </v-col>
 
             <v-col cols="12">
-              <v-text-field
-                v-model="form.password_confirmation"
-                :rules="passwordRules"
-                label="Confirm Password"
-                type="password"
-                hide-details
-                required
-              ></v-text-field>
+              <v-text-field v-model="form.password_confirmation" :rules="passwordRules" label="Confirm Password"
+                type="password" hide-details required></v-text-field>
             </v-col>
             <p class="text-center mb-2">
               Already have an account?
@@ -114,17 +72,3 @@ const register = async () => {
     </div>
   </MainLayout>
 </template>
-=======
-                        <v-btn class="mt-2" type="submit" block>Submit</v-btn>
-                    </v-col>
-                </v-container>
-            </v-form>
-        </div>
-    </MainLayout>
-</template>
-
-<script setup>
-    import MainLayout from "@/layout/MainLayout.vue";
-    import Fave from "@/components/Fave.vue";
-</script>
-

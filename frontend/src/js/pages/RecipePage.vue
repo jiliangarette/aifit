@@ -1,15 +1,20 @@
 <template>
 
   <MainLayout>
-    <div class="h-screen">Welcome to Recipe Page 🍪💞</div>
+
     <div v-if="token">
       {{ user.name }}
       {{ user.email }}
+
     </div>
+
+    <Fave />
+    <router-view />
   </MainLayout>
 </template>
 <script setup>
-import MainLayout from '@/layout/MainLayout.vue'
+import MainLayout from "@/layout/MainLayout.vue";
+import Fave from "@/components/Fave.vue";
 import { onMounted, ref } from 'vue'
 import axios from 'axios'
 
@@ -27,15 +32,4 @@ const loadUser = async () => {
 onMounted(() => {
   loadUser()
 })
-
-    <MainLayout>
-
-        <Fave />
-        <router-view />
-    </MainLayout>
-</template>
-<script setup>
-    import MainLayout from "@/layout/MainLayout.vue";
-    import Fave from "@/components/Fave.vue";
-
 </script>
