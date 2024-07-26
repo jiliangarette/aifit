@@ -2,6 +2,9 @@
 import MainLayout from '@/layout/MainLayout.vue'
 import { ref } from 'vue'
 import axios from 'axios'
+import { useRouter } from 'vue-router';
+
+const route = useRouter();
 
 const email = ref('')
 const password = ref('')
@@ -18,7 +21,7 @@ const login = async () => {
     // Store the token in localStorage
     localStorage.setItem('token', response.data.token)
 
-    console.log('Login successful')
+    route.push('/');
   } catch (e) {
     error.value = 'Login failed. Please try again.'
   }
@@ -33,24 +36,12 @@ const login = async () => {
           <h1>Log in</h1>
           <v-col>
             <v-col cols="12">
-              <v-text-field
-                v-model="email"
-                :rules="emailRules"
-                label="E-mail"
-                hide-details
-                required
-              ></v-text-field>
+              <v-text-field v-model="email" :rules="emailRules" label="E-mail" hide-details required></v-text-field>
             </v-col>
 
             <v-col cols="12">
-              <v-text-field
-                v-model="password"
-                :counter="10"
-                :rules="nameRules"
-                label="Password"
-                hide-details
-                required
-              ></v-text-field>
+              <v-text-field v-model="password" :counter="10" :rules="nameRules" label="Password" hide-details
+                required></v-text-field>
             </v-col>
           </v-col>
           <p class="text-center mb-4">
