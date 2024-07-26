@@ -8,15 +8,15 @@
 
     </div>
 
-    <Fave />
+    <RecipeTopSection />
     <router-view />
   </MainLayout>
 </template>
 <script setup>
 import MainLayout from "@/layout/MainLayout.vue";
-import Fave from "@/components/Fave.vue";
 import { onMounted, ref } from 'vue'
 import axios from 'axios'
+import RecipeTopSection from "../components/RecipeTopSection.vue";
 
 const token = localStorage.getItem('token')
 if (token) {

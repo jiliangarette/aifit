@@ -1,7 +1,7 @@
 <template>
     <MainLayout>
         <HomeView />
-        <Banner/>
+        <HomeBanner />
         <CalculatorForm />
 
     </MainLayout>
@@ -10,8 +10,8 @@
 <script setup>
 
 import MainLayout from "@/layout/MainLayout.vue";
-// import HomeView from "@/components/HomeView.vue";
+import HomeView from "@/components/HomeView.vue";
 import CalculatorForm from "@/components/CalculatorForm.vue";
-import Banner from "@/components/Banner.vue";
+import HomeBanner from "@/components/HomeBanner.vue";
 
 </script>
