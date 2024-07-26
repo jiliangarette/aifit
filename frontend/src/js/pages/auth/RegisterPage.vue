@@ -21,6 +21,7 @@ const register = async () => {
     // Handle success (e.g., store token, redirect, etc.)
     const token = response.data.token
     localStorage.setItem('token', token) // Store the token in localStorage
+    // console.log(token);
     // Set the Authorization header for future requests
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
 
