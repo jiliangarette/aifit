@@ -10,7 +10,7 @@
         </v-btn>
       </router-link>
       <router-link to="meal-plan">
-        <v-btn class="rounded-0 mr-4 text-capitalize text-teal-accent-4" height="60" width="160">
+        <v-btn class="rounded-0 mr-4 text-capitalize text-teal-accent-4 " height="60" width="160">
           Meal Plans
         </v-btn>
       </router-link>

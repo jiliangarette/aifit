@@ -4,6 +4,8 @@
 
 
     <div class="pa-6 mt-6">
+     
+
       <v-row>
         <v-col cols="12" md="4">
           <v-card image="https://i.pinimg.com/564x/93/44/bb/9344bbe4f9fedce292d0132c2e75f1c2.jpg" height="350"
@@ -43,6 +45,16 @@
         </v-col>
       </v-row>
     </div>
+      <div class="d-flex justify-center my-4">
+        <v-btn class="rounded-lg mr-4 text-capitalize bg-teal-darken-4" height="60" width="400" >
+          Add recipe
+        </v-btn>
+      </div>
+      <div class="mx-10 my-9">
+        <p class="d-flex text-center text-disabled text-subtitle-2">AiFIT - the revolutionary recipe nutrition calculator! Our app makes it simple for you to calculate the nutrition value of your favorite recipes and make informed food choices. <br>
+With AiFIT, you can easily input the ingredients of your recipe and receive a comprehensive report on the calorie count, macronutrient ratio, and more. Whether you're a <br> fitness enthusiast, looking to manage a specific dietary need, or simply want to make healthier food choices, AiFIT is the perfect tool for you. <br>
+Our user-friendly interface and accurate results make it easy to track your daily food intake and stay on track with your health and fitness goals. So why wait? Sign up today <br> and start using AiFIT to make every meal a healthy and nutritious one!</p>
+      </div>
   </div>
 
 </template>

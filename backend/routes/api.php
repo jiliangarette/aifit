@@ -31,3 +31,4 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanc
 Route::get('/recipes', [RecipeController::class, 'index']);
 Route::get('/recipes/{recipe}/ingredients', [RecipeController::class, 'ingredients']);
 Route::post('/calculate-nutrition', [NutritionController::class, 'calculate']);
+

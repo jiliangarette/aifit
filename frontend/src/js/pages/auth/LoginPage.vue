@@ -58,7 +58,7 @@ const login = async () => {
             <a class="text-teal-accent-4">Register</a>
           </p>
 
-          <v-btn class="mt-2" type="submit" block>Sign In</v-btn>
+          <v-btn class="mt-2 bg-teal-accent-4" type="submit" block>Sign In</v-btn>
           <p v-if="error" style="color: red; margin-top: 10px">{{ error }}</p>
         </v-container>
       </v-form>

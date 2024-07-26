@@ -65,7 +65,7 @@ const register = async () => {
             </p>
 
 
-            <v-btn class="mt-2" type="submit" block>Submit</v-btn>
+            <v-btn class="mt-2 bg-teal-accent-4" type="submit" block>Submit</v-btn>
             <v-alert v-if="error" type="error" dismissible>{{ error }}</v-alert>
           </v-col>
         </v-container>
