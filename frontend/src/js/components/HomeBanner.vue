@@ -35,7 +35,7 @@ body, html, #app {
   width: 100%;
   overflow-x: hidden;
 }
-
+  
 h1 {
   margin: 0;
 }

@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
-import { useRouter } from 'vue-router'
+
 
 const recipes = ref([])
 const selectedRecipeId = ref(null)
