@@ -1,3 +1,4 @@
+
 <script setup>
 import MainLayout from '@/layout/MainLayout.vue'
 import { ref } from 'vue'
@@ -14,6 +15,24 @@ const form = ref({
 })
 const valid = ref(true)
 const error = ref(null)
+
+<template>
+    <MainLayout>
+        <div class="h-screen d-flex justify-center">
+
+            <v-form v-model="valid" class="pa-10 py-5 w-50 ">
+                <v-container class="border-sm spacing-playground pa-6 ">
+                    <h1>Register</h1>
+                    <v-col >
+                        <v-col cols="12" >
+                            <v-text-field
+                                v-model="name"
+                                label="Name"
+                                hide-details
+                                required
+                            ></v-text-field>
+                        </v-col>
+
 
 const register = async () => {
   try {
@@ -86,6 +105,7 @@ const register = async () => {
               <a class="text-teal-accent-4">Log in</a>
             </p>
 
+
             <v-btn class="mt-2" type="submit" block>Submit</v-btn>
             <v-alert v-if="error" type="error" dismissible>{{ error }}</v-alert>
           </v-col>
@@ -94,3 +114,17 @@ const register = async () => {
     </div>
   </MainLayout>
 </template>
+=======
+                        <v-btn class="mt-2" type="submit" block>Submit</v-btn>
+                    </v-col>
+                </v-container>
+            </v-form>
+        </div>
+    </MainLayout>
+</template>
+
+<script setup>
+    import MainLayout from "@/layout/MainLayout.vue";
+    import Fave from "@/components/Fave.vue";
+</script>
+

@@ -1,4 +1,5 @@
 <template>
+
   <MainLayout>
     <div class="h-screen">Welcome to Recipe Page 🍪💞</div>
     <div v-if="token">
@@ -26,4 +27,15 @@ const loadUser = async () => {
 onMounted(() => {
   loadUser()
 })
+=======
+    <MainLayout>
+
+        <Fave />
+        <router-view />
+    </MainLayout>
+</template>
+<script setup>
+    import MainLayout from "@/layout/MainLayout.vue";
+    import Fave from "@/components/Fave.vue";
+
 </script>
