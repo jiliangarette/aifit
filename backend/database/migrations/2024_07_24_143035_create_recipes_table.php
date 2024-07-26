@@ -10,15 +10,16 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up()
-{
-    Schema::create('recipes', function (Blueprint $table) {
-        $table->id();
-        $table->string('name');
-        $table->text('description');
-        $table->float('serving_size')->default(100);
-        $table->timestamps();
-    });
-}
+    {
+        Schema::create('recipes', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->binary('image')->nullable();
+            $table->text('description');
+            $table->float('serving_size')->default(100);
+            $table->timestamps();
+        });
+    }
 
     /**
      * Reverse the migrations.
