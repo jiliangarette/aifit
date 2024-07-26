@@ -30,7 +30,7 @@
             </v-row>
             <v-row class=" px-4">
                 <v-text-field placeholder="email address" variant="solo" class="input-height" />
-                <v-btn class="btn-height px-8 font-weight-bold bg-cyan-accent-2" rounded="0">Subscribe</v-btn>
+                <v-btn class="btn-height py-5 pb-9 px-6 font-weight-bold bg-cyan-accent-2" rounded="0">Subscribe</v-btn>
             </v-row>
 
         </row>
@@ -71,19 +71,19 @@
     </v-container>
 </template>
 <script setup>
-    import { CircleUser, Instagram, Facebook, Twitter } from "lucide-vue-next";
+import { Instagram, Facebook, Twitter } from "lucide-vue-next";
 </script>
 <style scoped>
-    .input-height {
-        height: 57px;
+.input-height {
+    height: 57px;
 
-    }
+}
 
-    .btn-height {
-        height: 56px;
-        z-index: 1;
-        margin-left: -2px;
-        font-size: 12px;
-        text-transform: none;
-    }
+.btn-height {
+    height: 56px;
+    z-index: 1;
+    margin-left: -2px;
+    font-size: 12px;
+    text-transform: none;
+}
 </style>
