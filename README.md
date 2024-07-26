@@ -1,22 +1,22 @@
 Before pushing code, make sure your code is up to date
 
 Update your local repository
-git pull
+1. git pull
 
 Option 1: Push code directly to the development branch
-git checkout development
-git pull
-git add .
-git commit -m "your-message"
-git push
+1. git checkout development
+2. git pull
+3. git add .
+4. git commit -m "your-message"
+5. git push
 
 Option 2: Create a new branch for a feature
-git checkout development
-git pull
-git checkout -b feat/name-of-branch
-git add .
-git commit -m "your-message"
-git push origin feat/name-of-branch
+1. git checkout development
+2. git pull
+3. git checkout -b feat/name-of-branch
+4. git add .
+5. git commit -m "your-message"
+6. git push origin feat/name-of-branch
 
 Naming Conventions
 
