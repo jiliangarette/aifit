@@ -27,7 +27,7 @@ const loadUser = async () => {
 onMounted(() => {
   loadUser()
 })
-=======
+
     <MainLayout>
 
         <Fave />
