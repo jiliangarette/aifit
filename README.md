@@ -20,22 +20,22 @@ Option 2: Create a new branch for a feature
 
 Naming Conventions
 
-1. File Names
-a. Convention: Pascal Case
-b. Example: HomePage
+### File Names
+1. Convention: Pascal Case
+2. Example: HomePage
 
-2. Folder Names (dili final)
-a. Convention: Lowercase
-b. Example: pages
+###. Folder Names (dili final)
+1. Convention: Lowercase
+2. Example: pages
 
-3. Class Attribute Styling
-a. Convention: Kebab-case
-b. Example: navbar-button
+### Class Attribute Styling
+1. Convention: Kebab-case
+2. Example: navbar-button
 
-4. Functions / Variable
-a. Convention: CamelCase
-b. Example: const submitForm
+### Functions / Variable
+1. Convention: CamelCase
+2. Example: const submitForm
 
-5. Branch Names
-a. Convention: Kebab-case
-b. Example: feat/recipe-calculator
+### Branch Names
+1. Convention: Kebab-case
+2. Example: feat/recipe-calculator
