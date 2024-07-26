@@ -2,7 +2,7 @@
     <MainLayout>
         <HomeBanner />
         <CalculatorForm />
-        <ExploreMoreVue/>
+        <ExploreMoreVue />
 
     </MainLayout>
 </template>

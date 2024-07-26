@@ -1,19 +1,27 @@
 <template>
-  <div>
+  <div class="ma-8">
     <div>
-      <v-breadcrumbs class="text-h5 text-decoration-underline pl-6 mt-4">Recipe</v-breadcrumbs>
+
+      <v-breadcrumbs class="text-h5 pl-6 mt-4">Recipe / {{ $route.name }}</v-breadcrumbs>
     </div>
-    <div class="ml-5">
-      <router-link to="favorite">
-        <v-btn class="rounded-0 mr-4 bg-teal-accent-4 text-capitalize font-weight-bold" height="60" width="160">
-          Favorites
-        </v-btn>
+    <div class="ml-5 mt-4">
+      <router-link class="border mx-1 py-4 px-4 rounded-lg text-decoration-none" to="favorite">
+
+        Favorites
+
       </router-link>
-      <router-link to="meal-plan">
-        <v-btn class="rounded-0 mr-4 text-capitalize text-teal-accent-4 " height="60" width="160">
-          Meal Plans
-        </v-btn>
+      <router-link class="border mx-1 py-4 px-4 rounded-lg text-decoration-none " to="meal-plan">
+
+        Meal Plans
+
       </router-link>
     </div>
   </div>
 </template>
+<style>
+.aifit-active {
+  background-color: #00bfa5;
+  font-weight: bold;
+  color: white;
+}
+</style>

@@ -92,6 +92,6 @@ const logout = async () => {
 }
 
 .auth-button:hover {
-    background-color: rgb(228, 249, 228);
+    background-color: #b8f6ed;
 }
 </style>
