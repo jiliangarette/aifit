@@ -2,8 +2,6 @@ import { createApp } from 'vue'
 import App from './app.vue'
 import route from './router/routes'
 import axios from 'axios'
-
-//vuetify
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
