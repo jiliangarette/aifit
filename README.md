@@ -1,79 +1,41 @@
-## Steps to run this project locally
+Before pushing code, make sure your code is up to date
 
-1. Clone the repository:
+Update your local repository
+1. git pull
 
-   ```bash
-   git clone https://github.com/Jgarette0/aifit.git
-   ```
+Option 1: Push code directly to the development branch
+1. git checkout development
+2. git pull
+3. git add .
+4. git commit -m "your-message"
+5. git push
 
-2. Navigate to the project directory:
+Option 2: Create a new branch for a feature
+1. git checkout development
+2. git pull
+3. git checkout -b feat/name-of-branch
+4. git add .
+5. git commit -m "your-message"
+6. git push origin feat/name-of-branch
 
-   ```bash
-   cd aifit
-   ```
+Naming Conventions
 
-3. Navigate to backend code.
+### File Names
+1. Convention: Pascal Case
+2. Example: HomePage
 
-   ```bash
-   cd backend
-   ```
+###. Folder Names (dili final)
+1. Convention: Lowercase
+2. Example: pages
 
-4. Install PHP dependencies:
+### Class Attribute Styling
+1. Convention: Kebab-case
+2. Example: navbar-button
 
-   ```bash
-   composer install
-   ```
+### Functions / Variable
+1. Convention: CamelCase
+2. Example: const submitForm
 
-5. Copy the example environment file and configure it:
-
-   ```bash
-   cp .env.example .env
-   ```
-
-6. Generate an application key:
-
-   ```bash
-   php artisan key:generate
-   ```
-
-7. Compile the assets:
-
-   ```bash
-   php artisan migrate
-   ```
-
-8. Serve the application:
-
-   ```bash
-   php artisan db:seed
-   ```
-
-9. Navigate to aifit directory
-
-   ```bash
-   cd ..
-   ```
-
-10. Navigate to frontend code
-
-    ```bash
-    cd frontend
-    ```
-
-11. Install Node.js dependencies:
-
-    ```bash
-    npm install
-    ```
-
-12. Compile the assets:
-
-    ```bash
-    npm run dev
-    ```
-
-13. Serve the application in the backend directory:
-
-    ```bash
-    php artisan serve
-    ```
+### Branch Names
+1. Convention: Kebab-case
+2. Example: feat/recipe-calculator
