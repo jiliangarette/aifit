@@ -130,6 +130,7 @@ onMounted(() => {
       </v-card>
     </v-container>
   </v-col>
+  
 
   <!-- Column for the Black Box -->
   <v-col cols="6" class="pa-0 d-flex align-end flex-column">
