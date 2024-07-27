@@ -9,6 +9,10 @@ Option 1: Push code directly to the development branch
 3. git add .
 4. git commit -m "your-message"
 5. git push
+6. open pull request on github
+7. compare the changes `base: development`
+8. create pull request
+9. engna me para ma `merge`
 
 Option 2: Create a new branch for a feature
 1. git checkout development
@@ -17,6 +21,10 @@ Option 2: Create a new branch for a feature
 4. git add .
 5. git commit -m "your-message"
 6. git push origin feat/name-of-branch
+6. open pull request on github
+7. compare the changes `base: development` `compare: feat/your-branch`
+8. create pull request
+9. engna me para ma `merge`
 
 Naming Conventions
 
