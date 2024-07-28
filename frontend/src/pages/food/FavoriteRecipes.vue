@@ -1,57 +1,40 @@
 <script setup>
-
-  const foods = [
-    {
-      name: 'Adobo',
-      image: 'https://i.pinimg.com/564x/93/44/bb/9344bbe4f9fedce292d0132c2e75f1c2.jpg',
-      description: '1 serving = 100 Calories',
-    },
-    {
-      name: 'Adobo',
-      image: 'https://i.pinimg.com/564x/93/44/bb/9344bbe4f9fedce292d0132c2e75f1c2.jpg',
-      description: '1 serving = 100 Calories',
-    },
-    {
-      name: 'Adobo',
-      image: 'https://i.pinimg.com/564x/93/44/bb/9344bbe4f9fedce292d0132c2e75f1c2.jpg',
-      description: '1 serving = 100 Calories',
-    },
-    {
-      name: 'Adobo',
-      image: 'https://i.pinimg.com/564x/93/44/bb/9344bbe4f9fedce292d0132c2e75f1c2.jpg',
-      description: '1 serving = 100 Calories',
-    },
-    {
-      name: 'Adobo',
-      image: 'https://i.pinimg.com/564x/93/44/bb/9344bbe4f9fedce292d0132c2e75f1c2.jpg',
-      description: '1 serving = 100 Calories',
-    },
-    {
-      name: 'Adobo',
-      image: 'https://i.pinimg.com/564x/93/44/bb/9344bbe4f9fedce292d0132c2e75f1c2.jpg',
-      description: '1 serving = 100 Calories',
-    },
-  ];
-
-
+  import axios from 'axios';
+  import { onMounted, ref } from 'vue';
+  //https://run.mocky.io/v3/dfaf5225-4e83-4415-bace-46ac8813d812
+  //https://run.mocky.io/v3/977e1b1d-c8d5-4872-bcff-f1db518931f5
+  //https://run.mocky.io/v3/47f89c81-b9b8-41e5-aba9-564b61f66eb5
+  const foods = ref([]);
+  onMounted(
+    async () => {
+      try {
+        const response = await axios.get('https://run.mocky.io/v3/47f89c81-b9b8-41e5-aba9-564b61f66eb5');
+        foods.value = response.data.recipes;
+      } catch (error) { console.log(`Error: ${error}`) }
+    }
+  )
 
 
 </script>
 <template>
-
   <v-row class="pa-6 mt-6  ">
-    <v-row>
-
-      <v-col class=" d-flex justify-center" cols="12" sm="6" md="4" xl="3" v-for="food in foods" :key="food">
-        <v-card elevation="0" width="350">
-          <v-card class="mx-auto" :image="food.image" height="350" width="350" rounded="lg" />
-          <!-- <v-img :src="food.image" class="w-fill-width rounded-xl" /> -->
-          <!-- alternatibo -->
-          <div class="mt-6 text-h6 font-weight-bold text-h6">{{ food.name }}</div>
-          <p>{{ food.description }}</p>
-        </v-card>
-      </v-col>
+    <v-row v-if="$route.name === 'NutritionFacts'"><router-view /></v-row>
+    <v-row v-else class="w-100 d-flex items-center justify-center">
+      <router-link v-for="food in foods" :key="food" :to="`favorite/nutrition-facts/${food.id}`"
+        class=" d-flex justify-center items-center flex-column ma-2" cols="12" md="4">
+        <v-col>
+          <v-card elevation="0" class="recipe-card pa-6 rounded-xl">
+            <v-card class="mx-auto" :image="food.image_url" height="350" width="350" rounded="lg" />
+            <div class="mt-2 text-h6 font-weight-bold text-h6">{{ food.name }}</div>
+            <p>{{ food.description }}</p>
+          </v-card>
+        </v-col>
+      </router-link>
     </v-row>
   </v-row>
-
 </template>
+<style scoped>
+  .recipe-card:hover {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3) !important;
+  }
+</style>
