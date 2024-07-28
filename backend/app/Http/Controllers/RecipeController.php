@@ -12,7 +12,7 @@ class RecipeController extends Controller
     public function index()
     {
         $recipes = Recipe::with('recipeIngredients.ingredient')
-            ->get(['id', 'name', 'image_path', 'description', 'serving_size'])
+            ->get(['id', 'name', 'image_path', 'description', 'healthAndBenefits', 'serving_size'])
             ->map(function ($recipe) {
                 $recipe->image_url = Storage::disk('public')->url($recipe->image_path);
                 return $recipe;
