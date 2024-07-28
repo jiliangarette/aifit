@@ -18,7 +18,6 @@ class IngredientFactory extends Factory
 {
     return [
         'name' => $this->faker->word(),
-        'unit' => $this->faker->randomElement(['g', 'kg', 'oz']),
         'calories' => $this->faker->randomFloat(2, 0, 500),
         'total_fat' => $this->faker->randomFloat(2, 0, 50),
         'total_carbohydrates' => $this->faker->randomFloat(2, 0, 50),
