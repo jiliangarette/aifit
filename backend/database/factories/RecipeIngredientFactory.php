@@ -21,7 +21,8 @@ class RecipeIngredientFactory extends Factory
         return [
             'recipe_id' => Recipe::factory(),
             'ingredient_id' => Ingredient::factory(),
-            'amount' => $this->faker->randomFloat(2, 1, 1000),
+            'unit' => $this->faker->randomElement(['g', 'kg', 'oz']),
+            'amount' => $this->faker->randomNumber(1, 10),
         ];
     }
 }

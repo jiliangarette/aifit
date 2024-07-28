@@ -80,7 +80,9 @@ onMounted(() => {
                     <v-list-item v-if="ingredients.length === 0">
                     </v-list-item>
                     <v-list-item v-for="ingredient in ingredients" :key="ingredient.id">
-                      {{ ingredient.name }}
+                      {{ ingredient.pivot.amount}}
+                      {{ ingredient.pivot.unit}}
+                      {{ ingredient.name}}
                     </v-list-item>
                   </v-list>
                 </v-col>
