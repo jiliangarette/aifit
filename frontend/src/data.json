@@ -1,0 +1,90 @@
+{
+  "recipes": [
+    {
+      "id": 15,
+      "name": "Chicken CUrry",
+      "image_path": "recipes/K3iKMjqi7WFCXcAVIRGtJFoHtzdG4Mw2OUzrqOzk.png",
+      "description": "chicken curry is a basketball player from dubai",
+      "serving_size": 200,
+      "image_url": "http://127.0.0.1:8000/storage/recipes/K3iKMjqi7WFCXcAVIRGtJFoHtzdG4Mw2OUzrqOzk.png",
+      "recipe_ingredients": [
+        {
+          "id": 33,
+          "recipe_id": 15,
+          "ingredient_id": 1,
+          "unit": "grams",
+          "amount": 5,
+          "created_at": "2024-07-28T07:15:34.000000Z",
+          "updated_at": "2024-07-28T07:15:34.000000Z",
+          "ingredient": {
+            "id": 1,
+            "name": "talong",
+            "calories": 12,
+            "total_fat": 123,
+            "total_carbohydrates": 321,
+            "protein": 21,
+            "created_at": "2024-07-28T13:09:05.000000Z",
+            "updated_at": null
+          }
+        },
+        {
+          "id": 34,
+          "recipe_id": 15,
+          "ingredient_id": 1,
+          "unit": "ounces",
+          "amount": 6,
+          "created_at": "2024-07-28T07:15:34.000000Z",
+          "updated_at": "2024-07-28T07:15:34.000000Z",
+          "ingredient": {
+            "id": 1,
+            "name": "talong",
+            "calories": 12,
+            "total_fat": 123,
+            "total_carbohydrates": 321,
+            "protein": 21,
+            "created_at": "2024-07-28T13:09:05.000000Z",
+            "updated_at": null
+          }
+        },
+        {
+          "id": 35,
+          "recipe_id": 15,
+          "ingredient_id": 2,
+          "unit": "pounds",
+          "amount": 1,
+          "created_at": "2024-07-28T07:15:34.000000Z",
+          "updated_at": "2024-07-28T07:15:34.000000Z",
+          "ingredient": {
+            "id": 2,
+            "name": "hakdog",
+            "calories": 43,
+            "total_fat": 32,
+            "total_carbohydrates": 21,
+            "protein": 11,
+            "created_at": "2024-07-28T13:09:05.000000Z",
+            "updated_at": null
+          }
+        },
+        {
+          "id": 36,
+          "recipe_id": 15,
+          "ingredient_id": 3,
+          "unit": "oz",
+          "amount": 14,
+          "created_at": "2024-07-28T07:15:35.000000Z",
+          "updated_at": "2024-07-28T07:15:35.000000Z",
+          "ingredient": {
+            "id": 3,
+            "name": "bombay",
+            "calories": 11,
+            "total_fat": 22,
+            "total_carbohydrates": 33,
+            "protein": 44,
+            "created_at": "2024-07-28T13:12:16.000000Z",
+            "updated_at": null
+          }
+        }
+      ]
+    }
+  ]
+}
