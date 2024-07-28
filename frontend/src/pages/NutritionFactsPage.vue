@@ -1,39 +1,63 @@
 <template>
  <ContentCard class="rounded-xl ma-8 d-flex flex-column ">
-  <v-col class="border px-8 mt-16">
+  <v-col class=" px-8 mt-16">
    <v-row>
     <h1 class="my-8">{{ selectedFood.name }}</h1>
    </v-row>
    <v-img class="bg-grey-lighten-2 rounded-xl" height="450"
-    src="https://i.pinimg.com/236x/a5/7a/da/a57ada9962153de831f02e5d2f643797.jpg" cover />
+    :src="selectedFood.image_url" cover />
   </v-col>
   <v-row class="my-6 text-subtitle px-12">
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta tempora nihil, mollitia, nostrum vero nam labore
-    inventore dolor pariatur voluptate consectetur officiis nemo tenetur doloremque est odio sunt quia!
-    Repudiandae.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quaerat, commodi animi obcaecati
-    maxime modi incidunt natus facere laborum itaque officiis doloremque provident sunt dicta ex alias recusandae,
-    cumque rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolor culpa maxime nam. Tempore
-    cupiditate nam a beatae doloremque itaque similique? Perspiciatis saepe praesentium at tenetur vitae iure quo
-    impedit.</p>
+   <p> {{ selectedFood.description }}</p>
   </v-row>
   <v-row class="px-16">
+
    <v-col class="d-flex flex-column">
-    <h3 class="py-12">Ingredients</h3>
-    <v-row v-for="ingredient in selectedFood.recipe_ingredients" :key="ingredient.id">
-     {{ ingredient.ingredient.name }} ({{ ingredient.amount }} {{ ingredient.unit }})
+    <v-row class="">
+     <v-col>
+      <h2>Ingredients</h2>
+     </v-col>
+     <v-col>
+      <h2>Nutrition Facts</h2>
+     </v-col>
     </v-row>
-
+    <v-table class="transparent-table">
+     <thead>
+      <tr>
+       <th class="text-h5 ">Ingredient</th>
+       <th class="text-h6 ">Calories</th>
+       <th class="text-h6 ">Total Fat</th>
+       <th class="text-h6 "> Carbohydrates</th>
+       <th class="text-h6 ">Protein</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr v-for="ingredient in selectedFood.recipe_ingredients" :key="ingredient.id">
+       <td class="ingredient-col">
+        {{ ingredient.ingredient.name }} ({{ ingredient.amount }} {{ ingredient.unit }})
+       </td>
+       <td class="nutrifact">
+        {{ ingredient.ingredient.calories }}
+       </td>
+       <td class="nutrifact">
+        {{ ingredient.ingredient.total_fat }}
+       </td>
+       <td class="nutrifact">
+        {{ ingredient.ingredient.total_carbohydrates }}
+       </td>
+       <td class="nutrifact">
+        {{ ingredient.ingredient.protein }}
+       </td>
+      </tr>
+     </tbody>
+    </v-table>
    </v-col>
-   <v-col class="d-flex flex-column">
-    <h3 class="py-12">Nutrition Facts (per serving, based on 8 servings):</h3>
-    <v-row>engredients</v-row>
-    <v-row>engredients</v-row>
-    <v-row>engredients</v-row>
-    <v-row>engredients</v-row>
-    <v-row>engredients</v-row>
-    <v-row>engredients</v-row>
+  </v-row>
+  <v-row>
+   <v-col class="pa-8 pb-0">
+    <h2>Health Benifits</h2>
    </v-col>
-
+   <p class="pa-8 pt-4">{{ selectedFood.description }}</p>
   </v-row>
  </ContentCard>
 </template>
@@ -44,7 +68,6 @@
  import { useRoute } from 'vue-router';
 
 
-
  const route = useRoute();
  const foods = ref([])
 
@@ -52,8 +75,9 @@
 
  onMounted(async () => {
   try {
-   const response = await axios.get('https://run.mocky.io/v3/47f89c81-b9b8-41e5-aba9-564b61f66eb5');
-   foods.value = response.data.recipes;
+   const response = await axios.get('https://run.mocky.io/v3/47f89c81-b9b8-41e5-aba9-564b61f66eb5'); //api/recipes
+   foods.value = response.data.recipes; //remove recipes
+   console.log(response.data)
   } catch (error) {
    console.log(`Error : ${error}`)
   }
@@ -63,15 +87,21 @@
   return foods.value.find(food => food.id === routeId.value) || {};
  });
 
- // get the params id and convert into number
- // find the recipe id and through axios
- // compare both params id is equal to recipe id ex: 1 === 1
- // use computed property
 </script>
 <style scoped>
  .banner-image {
   object-fit: cover;
   object-position: center;
 
+ }
+
+ .transparent-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: transparent;
+ }
+
+ .nutrifact {
+  width: 15%;
  }
 </style>

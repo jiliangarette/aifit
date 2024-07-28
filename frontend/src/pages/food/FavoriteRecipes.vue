@@ -8,8 +8,8 @@
   onMounted(
     async () => {
       try {
-        const response = await axios.get('https://run.mocky.io/v3/47f89c81-b9b8-41e5-aba9-564b61f66eb5');
-        foods.value = response.data.recipes;
+        const response = await axios.get('https://run.mocky.io/v3/47f89c81-b9b8-41e5-aba9-564b61f66eb5'); // 'api/recipes'
+        foods.value = response.data.recipes; //remove recipes after switch
       } catch (error) { console.log(`Error: ${error}`) }
     }
   )
