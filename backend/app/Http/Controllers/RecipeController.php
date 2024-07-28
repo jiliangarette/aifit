@@ -22,7 +22,6 @@ class RecipeController extends Controller
     }
 
 
-    
     public function getIngredients(Recipe $recipe)
     {
         $ingredients = $recipe->ingredients;
