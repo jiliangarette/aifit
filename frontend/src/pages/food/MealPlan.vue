@@ -37,21 +37,7 @@
 <script setup>
  import ContentCard from '@/components/ui/ContentCard.vue';
  import { ref } from 'vue';
-
-
- // onMounted(async () => {
- //        try {
- //            const response = await axios.get('/api/meal-plan');
- //            tasks.value = response.data.map((todo) => ({
- //                id: todo.id,
- //                name: todo.name,
- //                username: todo.username
- //            }));
- //        } catch (error) {
- //            console.log(`error ${error}`);
- //        }
- //    });
- // IF BACKEND API IS READY THEN SWITCH TO THIS
+ 
  const meals = ref(
   [
    {
