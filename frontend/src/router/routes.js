@@ -46,7 +46,7 @@ const routes = [
           {
             path: 'nutrition-facts/:id',
             name: 'NutritionFacts',
-            component: () => import('@/pages/NutritionFactsPage.vue')
+            component: () => import('@/pages/food/NutritionFactsPage.vue')
           }
         ]
       }
