@@ -25,6 +25,7 @@ class RecipeFactory extends Factory
                 return $imagePath;
             },
             'description' => $this->faker->sentence(),
+            'healthAndBenefits' => $this->faker->sentence(),
             'serving_size' => $this->faker->numberBetween(50, 500),
         ];
     }
