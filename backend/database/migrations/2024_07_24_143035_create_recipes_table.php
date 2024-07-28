@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('image_path')->nullable();
             $table->text('description');
+            $table->text('healthAndBenefits');
             $table->integer('serving_size')->default(100);
             $table->timestamps();
         });
