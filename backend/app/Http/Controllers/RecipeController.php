@@ -25,7 +25,8 @@ class RecipeController extends Controller
     
     public function getIngredients(Recipe $recipe)
     {
-        return $recipe->ingredients;
+        $ingredients = $recipe->ingredients;
+        return response()->json($ingredients);
     }
 
 
@@ -35,6 +36,7 @@ class RecipeController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
+            'healthAndBenefits' => 'required|string',
             'serving_size' => 'required|integer|min:1',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // 2MB Max
 
@@ -55,6 +57,7 @@ class RecipeController extends Controller
         $recipe = Recipe::create([
             'name' => $validatedData['name'],
             'description' => $validatedData['description'],
+            'healthAndBenefits' => $validatedData['healthAndBenefits'],
             'serving_size' => $validatedData['serving_size'],
             'image_path' => $imagePath,
         ]);
