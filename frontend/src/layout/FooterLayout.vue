@@ -1,6 +1,6 @@
 <template>
     <v-container fluid class="w-screen d-flex align-center justify-center pl-8 py-12 bg-teal-darken-4" cols="3">
-        <row class=" d-flex flex-column align-center justify-center pr-8 mr-8">
+        <v-row class=" d-flex flex-column align-center justify-center pr-8 mr-8">
             <v-row class="">
                 <v-list-item-content class="mx-6">
                     <router-link to="/community"
@@ -19,8 +19,8 @@
                 </v-list-item-content>
             </v-row>
 
-        </row>
-        <row class=" d-flex flex-column  justify-evenly pr-8 w-33 ml-15">
+        </v-row>
+        <v-row class=" d-flex flex-column  justify-evenly pr-8 w-33 ">
             <v-row class="">
                 <v-list-item-content class="mx-6">
                     <router-link to="/community" class="text-white font-weight-bold text-decoration-none">Subscribe
@@ -33,8 +33,8 @@
                 <v-btn class="btn-height py-5 pb-9 px-6 font-weight-bold bg-cyan-accent-2" rounded="0">Subscribe</v-btn>
             </v-row>
 
-        </row>
-        <row class=" d-flex flex-column align-center justify-evenly pr-8">
+        </v-row>
+        <v-row class=" d-flex flex-column align-center justify-evenly pr-8">
             <v-row class=" py-2">
 
                 <v-list-item-content class="mx-6">
@@ -67,23 +67,23 @@
                 </v-list-item-content>
             </v-row>
 
-        </row>
+        </v-row>
     </v-container>
 </template>
 <script setup>
-import { Instagram, Facebook, Twitter } from "lucide-vue-next";
+    import { Instagram, Facebook, Twitter } from "lucide-vue-next";
 </script>
 <style scoped>
-.input-height {
-    height: 57px;
+    .input-height {
+        height: 57px;
 
-}
+    }
 
-.btn-height {
-    height: 56px;
-    z-index: 1;
-    margin-left: -2px;
-    font-size: 12px;
-    text-transform: none;
-}
+    .btn-height {
+        height: 56px;
+        z-index: 1;
+        margin-left: -2px;
+        font-size: 12px;
+        text-transform: none;
+    }
 </style>
