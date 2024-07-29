@@ -1,9 +1,11 @@
 <template>
-    <div>
+
+    <MainLayout>
         <Community/>
-    </div>
+    </MainLayout>
 </template>
 
 <script setup>
-import Community from '@/components/ui/Community.vue';
+    import MainLayout from "@/layout/MainLayout.vue";
+    import Community from "@/components/Community.vue";
 </script>
