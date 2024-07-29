@@ -54,7 +54,7 @@ onMounted(() => {
   <!-- Column for the Recipe Card -->
   <v-col cols="6" class="pa-0">
     <v-container class="mx-0 my-0 pa-0 ml-10">
-      <v-card width="860" height="750" class="bg-teal-lighten-5">
+      <v-card width="860" height="900" class="bg-teal-lighten-5">
         <v-row>
           <v-col cols="12" class="pa-10 py-5 text-subtitle-1 font-weight-normal mt-6 ml-2">
             Recipe
@@ -116,9 +116,9 @@ onMounted(() => {
           </v-col>
         </v-row>
 
-        <v-row v-if="nutritionValues">
-          <v-col cols="12">
-            <v-card>
+        <v-row v-if="nutritionValues" >
+          <v-col cols="12" >
+            <v-card style="width: 780px" class="ml-7">
               <v-card-title>Nutrition Values:</v-card-title>
               <v-card-text>
                 <p>Calories: {{ nutritionValues.calories }}</p>
