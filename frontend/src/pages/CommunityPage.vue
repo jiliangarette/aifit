@@ -1,5 +1,9 @@
 <template>
     <div>
-        🫨🫨😱Community Peji 👊🏻🔥✨
+        <Community/>
     </div>
 </template>
+
+<script setup>
+import Community from '@/components/ui/Community.vue';
+</script>
