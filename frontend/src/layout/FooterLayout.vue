@@ -71,19 +71,25 @@
     </v-container>
 </template>
 <script setup>
-    import { Instagram, Facebook, Twitter } from "lucide-vue-next";
+import { Instagram, Facebook, Twitter } from "lucide-vue-next";
 </script>
 <style scoped>
-    .input-height {
-        height: 57px;
+.input-height {
+    height: 57px;
 
-    }
+}
 
-    .btn-height {
-        height: 56px;
-        z-index: 1;
-        margin-left: -2px;
-        font-size: 12px;
-        text-transform: none;
-    }
+.btn-height {
+    height: 56px;
+    z-index: 1;
+    margin-left: -2px;
+    font-size: 12px;
+    text-transform: none;
+}
+
+v-list-item-content,
+v-row,
+v-col {
+    border: 1px solid red;
+}
 </style>
