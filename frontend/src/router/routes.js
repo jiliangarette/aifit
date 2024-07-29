@@ -1,13 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/pages/HomePage.vue'
-import AboutPage from '@/pages/AboutPage.vue'
-import RecipePage from '@/pages/RecipePage.vue'
-import CommunityPage from '@/pages/CommunityPage.vue'
-import RegisterPage from '@/pages/auth/RegisterPage.vue'
-import LoginPage from '@/pages/auth/LoginPage.vue'
 import NotFound from '@/pages/NotFound.vue'
-import FavoriteRecipes from '@/pages/food/FavoriteRecipes.vue'
-import MealPlan from '@/pages/food/MealPlan.vue'
 
 const routes = [
   {
@@ -18,37 +11,44 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    component: AboutPage
+    component: () => import('@/pages/AboutPage.vue')
   },
   {
     path: '/community',
     name: 'Community',
-    component: CommunityPage
+    component: () => import('@/pages/CommunityPage.vue')
   },
   {
     path: '/register',
     name: 'Register',
-    component: RegisterPage
+    component: () => import('@/pages/auth/RegisterPage.vue')
   },
   {
     path: '/login',
     name: 'Login',
-    component: LoginPage
+    component: () => import('@/pages/auth/LoginPage.vue')
   },
   {
     path: '/recipe',
     name: 'Recipe',
-    component: RecipePage,
+    component: () => import('@/pages/RecipePage.vue'),
     children: [
-      {
-        path: 'favorite',
-        name: 'Favorite',
-        component: FavoriteRecipes
-      },
       {
         path: 'meal-plan',
         name: 'MealPlan',
-        component: MealPlan
+        component: () => import('@/pages/food/MealPlan.vue')
+      },
+      {
+        path: 'favorite',
+        name: 'Favorite',
+        component: () => import('@/pages/food/FavoriteRecipes.vue'),
+        children: [
+          {
+            path: 'nutrition-facts/:id/:recipe',
+            name: 'NutritionFacts',
+            component: () => import('@/pages/food/NutritionFactsPage.vue')
+          }
+        ]
       }
     ]
   },

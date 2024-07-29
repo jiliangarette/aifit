@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\IngredientController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -27,8 +28,9 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
-
+Route::get('/ingredients', [IngredientController::class, 'index']);
 Route::get('/recipes', [RecipeController::class, 'index']);
-Route::get('/recipes/{recipe}/ingredients', [RecipeController::class, 'ingredients']);
+Route::post('/recipes', [RecipeController::class, 'store']);
+Route::get('/recipes/{recipe}/ingredients', [RecipeController::class, 'getIngredients']);
 Route::post('/calculate-nutrition', [NutritionController::class, 'calculate']);
 

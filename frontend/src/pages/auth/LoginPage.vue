@@ -17,8 +17,6 @@ const login = async () => {
       email: email.value,
       password: password.value
     })
-
-    // Store the token in localStorage
     localStorage.setItem('token', response.data.token)
 
     route.push('/');
