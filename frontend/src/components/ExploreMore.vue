@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-col cols="auto">
-      <v-card class="overflow-auto py-12">
+      <v-card class="overflow-auto py-12" elevation="0">
         <v-card-text>
           <h1 class="headline">Explore More Recipes</h1>
           <p class="subtext">
@@ -17,8 +17,8 @@
     <v-row>
 
       <v-col cols="12" md="6">
-        <router-link to="/recipe/favorite/nutrition-facts/2" class="underline-none">
-          <v-container>
+        <router-link to="/recipe/favorite/nutrition-facts/5/caesar-salad" class="underline-none">
+          <v-card class="rounded-lg">
             <v-row>
               <v-col cols="6">
                 <v-img cover class="rounded-lg"
@@ -39,15 +39,15 @@
                 </v-card>
               </v-col>
             </v-row>
-          </v-container>
+          </v-card>
         </router-link>
       </v-col>
 
 
 
       <v-col cols="12" md="6">
-        <router-link to="/recipe/favorite/nutrition-facts/4" class="underline-none">
-          <v-container>
+        <router-link to="recipe/favorite/nutrition-facts/4/spaghetti-bolognese" class="underline-none">
+          <v-card class="rounded-lg">
             <v-row>
               <v-col cols="6">
                 <v-img cover class="rounded-lg"
@@ -68,7 +68,7 @@
                 </v-card>
               </v-col>
             </v-row>
-          </v-container>
+          </v-card>
         </router-link>
       </v-col>
 
@@ -81,21 +81,20 @@
 </script>
 
 <style scoped>
-  .headline {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 1rem;
-  }
+.headline {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
 
-  .subtext {
-    font-size: 1.5rem;
-    color: #555;
-    line-height: 1.5;
-  }
+.subtext {
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 1.5;
+}
 
-  .underline-none {
-    text-decoration: none;
-  }
-
+.underline-none {
+  text-decoration: none;
+}
 </style>
