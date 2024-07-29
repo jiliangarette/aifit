@@ -54,53 +54,55 @@
     </v-row>
     <v-row>
       <v-col class="pa-8 pb-0">
-        <h2>Health Benifits</h2>
+        <h2>Health Benefits</h2>
+        <p class="pa-8 pt-4">{{ selectedRecipe.healthAndBenefits }}</p>
       </v-col>
-      <p class="pa-8 pt-4">{{ selectedRecipe.description }}</p>
+
     </v-row>
   </ContentCard>
 </template>
 <script setup>
-  import ContentCard from '@/components/ui/ContentCard.vue';
-  import axios from 'axios';
-  import { computed, onMounted, ref } from 'vue';
-  import { useRoute } from 'vue-router';
+import ContentCard from '@/components/ui/ContentCard.vue';
+import axios from 'axios';
+import { computed, onMounted, ref } from 'vue';
+import { useRoute } from 'vue-router';
 
 
-  const route = useRoute();
-  const foods = ref([])
+const route = useRoute();
+const foods = ref([])
 
-  const routeId = computed(() => parseInt(route.params.id))
+const routeId = computed(() => parseInt(route.params.id))
 
-  onMounted(async () => {
-    try {
-      const response = await axios.get('https://run.mocky.io/v3/47f89c81-b9b8-41e5-aba9-564b61f66eb5'); //api/recipes
-      foods.value = response.data.recipes; //remove recipes
-      console.log(response.data)
-    } catch (error) {
-      console.log(`Error : ${error}`)
-    }
-  })
+onMounted(async () => {
+  try {
+    const response = await axios.get('https://run.mocky.io/v3/47f89c81-b9b8-41e5-aba9-564b61f66eb5'); //api/recipes
 
-  const selectedRecipe = computed(() => {
-    return foods.value.find(food => food.id === routeId.value) || {};
-  });
+    foods.value = response.data.recipes; //remove recipes
+    console.log(response.data)
+  } catch (error) {
+    console.log(`Error : ${error}`)
+  }
+})
+
+const selectedRecipe = computed(() => {
+  return foods.value.find(food => food.id === routeId.value) || {};
+});
 
 </script>
 <style scoped>
-  .banner-image {
-    object-fit: cover;
-    object-position: center;
+.banner-image {
+  object-fit: cover;
+  object-position: center;
 
-  }
+}
 
-  .transparent-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: transparent;
-  }
+.transparent-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: transparent;
+}
 
-  .nutrifact {
-    width: 15%;
-  }
+.nutrifact {
+  width: 15%;
+}
 </style>

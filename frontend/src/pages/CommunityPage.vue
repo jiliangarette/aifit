@@ -1,4 +1,5 @@
 <template>
+
     <MainLayout>
         <Community/>
     </MainLayout>

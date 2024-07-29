@@ -1,8 +1,11 @@
 <template>
   <v-container fluid>
+
     <!-- Header Section -->
     <v-col cols="auto" class="mb-4">
       <v-card class="overflow-auto py-12">
+
+
         <v-card-text>
           <h1 class="headline">Explore More Recipes</h1>
           <p class="subtext">
@@ -18,10 +21,14 @@
     
     <!-- Recipes Grid -->
     <v-row>
+
       <!-- Recipe Card 1 -->
       <v-col cols="12" md="6" class="mb-4">
         <router-link to="/recipe/favorite/nutrition-facts/2" class="underline-none">
           <v-card>
+
+
+
             <v-row>
               <v-col cols="12" md="6">
                 <v-img
@@ -46,11 +53,17 @@
           </v-card>
         </router-link>
       </v-col>
+
       
       <!-- Recipe Card 2 -->
       <v-col cols="12" md="6" class="mb-4">
         <router-link to="/recipe/favorite/nutrition-facts/4" class="underline-none">
           <v-card>
+
+
+
+
+      
             <v-row>
               <v-col cols="12" md="6">
                 <v-img
@@ -84,6 +97,7 @@
 </script>
 
 <style scoped>
+<
   .headline {
     font-size: 1.5rem;
     font-weight: bold;
@@ -109,4 +123,22 @@
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+=======
+.headline {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.subtext {
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.underline-none {
+  text-decoration: none;
+}
+
 </style>
