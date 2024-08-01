@@ -97,14 +97,34 @@ onMounted(() => {
     <v-textarea label="Health and Benefits" v-model="healthAndBenefits" required></v-textarea>
 
     <!-- for image -->
-    <v-file-input label="Image" v-model="image" accept="image/*" @change="onFileChange" required></v-file-input>
+
+    <v-file-input
+      label="Image"
+      v-model="image"
+      accept="image/*"
+      @change="onFileChange"
+      required
+    ></v-file-input>
 
     <!-- for adding serving size -->
-    <v-text-field v-model.number="servingSize" type="number" class="w-70" label="Serving Size"></v-text-field>
+    <v-text-field
+      v-model.number="servingSize"
+      type="number"
+      class="w-70"
+      label="Serving Size"
+    ></v-text-field>
 
     <!-- for adding ingredient -->
-    <v-select class="rounded-xl" v-model="selectedIngredientId" :items="ingredients" item-title="name" item-value="id"
-      label="Select ingredient" style="width: 780px; height: 50px"></v-select>
+    <v-select
+      class="rounded-xl"
+      v-model="selectedIngredientId"
+      :items="ingredients"
+      item-title="name"
+      item-value="id"
+      label="Select ingredient"
+      style="width: 780px; height: 50px"
+    ></v-select>
+
 
     <!-- for ingredient amount -->
     <v-text-field v-model="ingredientAmount" type="text" class="w-70" label="Amount"></v-text-field>
@@ -129,8 +149,15 @@ onMounted(() => {
 
     <v-row>
       <v-col cols="12" class="d-flex justify-start ml-7">
-        <v-btn height="60" width="250" class="rounded-lg mr-4 text-capitalize bg-teal-darken-4" @click="addRecipe">Add
-          recipe</v-btn>
+
+        <v-btn
+          height="60"
+          width="250"
+          class="rounded-lg mr-4 text-capitalize bg-teal-darken-4"
+          @click="addRecipe"
+          >Add recipe</v-btn
+        >
+
       </v-col>
     </v-row>
   </div>
