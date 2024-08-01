@@ -44,7 +44,7 @@ const routes = [
         component: () => import('@/pages/food/FavoriteRecipes.vue'),
         children: [
           {
-            path: 'nutrition-facts/:id',
+            path: 'nutrition-facts/:id/:recipe',
             name: 'NutritionFacts',
             component: () => import('@/pages/food/NutritionFactsPage.vue')
           }

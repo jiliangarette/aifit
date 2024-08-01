@@ -97,6 +97,7 @@ onMounted(() => {
     <v-textarea label="Health and Benefits" v-model="healthAndBenefits" required></v-textarea>
 
     <!-- for image -->
+
     <v-file-input
       label="Image"
       v-model="image"
@@ -124,6 +125,7 @@ onMounted(() => {
       style="width: 780px; height: 50px"
     ></v-select>
 
+
     <!-- for ingredient amount -->
     <v-text-field v-model="ingredientAmount" type="text" class="w-70" label="Amount"></v-text-field>
 
@@ -147,6 +149,7 @@ onMounted(() => {
 
     <v-row>
       <v-col cols="12" class="d-flex justify-start ml-7">
+
         <v-btn
           height="60"
           width="250"
@@ -154,6 +157,7 @@ onMounted(() => {
           @click="addRecipe"
           >Add recipe</v-btn
         >
+
       </v-col>
     </v-row>
   </div>
