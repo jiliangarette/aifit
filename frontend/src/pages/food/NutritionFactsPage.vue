@@ -75,9 +75,9 @@ const routeId = computed(() => parseInt(route.params.id))
 
 onMounted(async () => {
   try {
-    const response = await axios.get('https://run.mocky.io/v3/47f89c81-b9b8-41e5-aba9-564b61f66eb5'); //api/recipes
+    const response = await axios.get('api/recipes'); //api/recipes
 
-    foods.value = response.data.recipes; //remove recipes
+    foods.value = response.data; //remove recipes
     console.log(response.data)
   } catch (error) {
     console.log(`Error : ${error}`)

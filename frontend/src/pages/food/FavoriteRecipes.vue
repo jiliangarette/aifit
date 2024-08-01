@@ -1,18 +1,18 @@
 <script setup>
-import axios from 'axios';
-import { onMounted, ref } from 'vue';
-//https://run.mocky.io/v3/dfaf5225-4e83-4415-bace-46ac8813d812
-//https://run.mocky.io/v3/977e1b1d-c8d5-4872-bcff-f1db518931f5
-//https://run.mocky.io/v3/47f89c81-b9b8-41e5-aba9-564b61f66eb5
-const foods = ref([]);
-onMounted(
-  async () => {
-    try {
-      const response = await axios.get('https://run.mocky.io/v3/47f89c81-b9b8-41e5-aba9-564b61f66eb5'); // 'api/recipes'
-      foods.value = response.data.recipes; //remove recipes after switch
-    } catch (error) { console.log(`Error: ${error}`) }
-  }
-)
+  import axios from 'axios';
+  import { onMounted, ref } from 'vue';
+  //https://run.mocky.io/v3/dfaf5225-4e83-4415-bace-46ac8813d812
+  //https://run.mocky.io/v3/977e1b1d-c8d5-4872-bcff-f1db518931f5
+  //https://run.mocky.io/v3/47f89c81-b9b8-41e5-aba9-564b61f66eb5
+  const foods = ref([]);
+  onMounted(
+    async () => {
+      try {
+        const response = await axios.get('api/recipes'); // 'api/recipes'
+        foods.value = response.data; //remove recipes after switch
+      } catch (error) { console.log(`Error: ${error}`) }
+    }
+  )
 
 
 </script>
@@ -35,11 +35,11 @@ onMounted(
   </v-row>
 </template>
 <style scoped>
-.recipe-card:hover {
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3) !important;
-}
+  .recipe-card:hover {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3) !important;
+  }
 
-.link {
-  text-decoration: none;
-}
+  .link {
+    text-decoration: none;
+  }
 </style>
