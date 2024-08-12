@@ -1,6 +1,6 @@
 `File Names`
-a. Convention: Pascal Case
-b. Example: `HomePage`
+1. Convention: Pascal Case
+2. Example: `HomePage`
 
 `Folder names`
 -Convention: Lowercase
