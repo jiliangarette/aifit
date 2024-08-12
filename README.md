@@ -6,26 +6,23 @@ To ensure clarity and consistency in our commit history, please follow these con
 
 ### Commit Types
 
-- **feat**: Used for new features.
-  - Example: `feat: add user authentication`
-  
-- **fix**: Used for bug fixes.
-  - Example: `fix: resolve issue with login validation`
-  
-- **docs**: Used for documentation updates.
-  - Example: `docs: update API documentation`
-  
-- **style**: Used for formatting changes that do not affect the code's functionality.
-  - Example: `style: format code with Prettier`
-  
-- **refactor**: Used for code changes that neither fix a bug nor add a feature, such as refactoring code.
-  - Example: `refactor: simplify component state management`
-  
-- **test**: Used for adding or correcting tests.
-  - Example: `test: add unit tests for authentication module`
-  
-- **chore**: Used for routine tasks or maintenance that do not fit into other categories.
-  - Example: `chore: update dependencies`
+# Project Guidelines
+
+## Commit Message Conventions
+
+To keep our commit history clear and organized, use the following types for your commit messages:
+
+- **feat**: For adding new features.
+  - Example: `feat: add user login page`
+
+- **fix**: For fixing bugs.
+  - Example: `fix: correct signup form validation error`
+
+- **docs**: For updating documentation.
+  - Example: `docs: add setup instructions to README`
+
+- **refactor**: For changes that improve the code without adding features or fixing bugs.
+  - Example: `refactor: clean up code in user profile component`
 
 ## File Naming Conventions
 
