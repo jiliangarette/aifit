@@ -1,14 +1,6 @@
-# Project Guidelines
 
-## Commit Message Conventions
 
-To ensure clarity and consistency in our commit history, please follow these conventions for commit messages:
-
-### Commit Types
-
-# Project Guidelines
-
-## Commit Message Conventions
+### Commit Message Conventions
 
 To keep our commit history clear and organized, use the following types for your commit messages:
 
@@ -24,7 +16,7 @@ To keep our commit history clear and organized, use the following types for your
 - **refactor**: For changes that improve the code without adding features or fixing bugs.
   - Example: `refactor: clean up code in user profile component`
 
-## File Naming Conventions
+### File Naming Conventions
 
 - **File Names**
   - **Convention**: Pascal Case
