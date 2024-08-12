@@ -1,20 +1,47 @@
-**File Names**
+# Project Guidelines
 
-- **Convention**: Pascal Case
-- **Example**: `HomePage`
+## Commit Message Conventions
 
-**Folder Names**
+To ensure clarity and consistency in our commit history, please follow these conventions for commit messages:
 
-- **Convention**: Lowercase
-- **Example**: `pages`
+### Commit Types
 
-**Class Attribute Styling and Branch Names**
+- **feat**: Used for new features.
+  - Example: `feat: add user authentication`
+  
+- **fix**: Used for bug fixes.
+  - Example: `fix: resolve issue with login validation`
+  
+- **docs**: Used for documentation updates.
+  - Example: `docs: update API documentation`
+  
+- **style**: Used for formatting changes that do not affect the code's functionality.
+  - Example: `style: format code with Prettier`
+  
+- **refactor**: Used for code changes that neither fix a bug nor add a feature, such as refactoring code.
+  - Example: `refactor: simplify component state management`
+  
+- **test**: Used for adding or correcting tests.
+  - Example: `test: add unit tests for authentication module`
+  
+- **chore**: Used for routine tasks or maintenance that do not fit into other categories.
+  - Example: `chore: update dependencies`
 
-- **Convention**: Kebab-case
-- **Example**: `navbar-button`
-- **Example**: `feat/recipe-calculator`
+## File Naming Conventions
 
-**Functions / Variables**
+- **File Names**
+  - **Convention**: Pascal Case
+  - **Example**: `HomePage`
 
-- **Convention**: CamelCase
-- **Example**: `submitForm`
+- **Folder Names**
+  - **Convention**: Lowercase
+  - **Example**: `pages`
+
+- **Class Attribute Styling and Branch Names**
+  - **Convention**: Kebab-case
+  - **Example**: `navbar-button`
+  - **Example**: `feat/recipe-calculator`
+
+- **Functions / Variables**
+  - **Convention**: CamelCase
+  - **Example**: `submitForm`
