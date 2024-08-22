@@ -5,6 +5,12 @@ import { onMounted, ref } from 'vue';
 //https://run.mocky.io/v3/977e1b1d-c8d5-4872-bcff-f1db518931f5
 //https://run.mocky.io/v3/47f89c81-b9b8-41e5-aba9-564b61f66eb5
 const foods = ref([]);
+
+const urlSlug = (text) => {
+  return text.trim().split(/\s+/).join("-").toLowerCase()
+}
+
+
 onMounted(
   async () => {
     try {
@@ -21,7 +27,7 @@ onMounted(
     <v-row v-if="$route.name === 'NutritionFacts'"><router-view /></v-row>
     <v-row v-else class="w-100 d-flex items-center justify-center">
       <router-link v-for="food in foods" :key="food"
-        :to="`favorite/nutrition-facts/${food.id}/${food.name.toLowerCase().replace(/\s+/g, '-')}`"
+        :to="`/favorite/nutrition-facts/${food.id}/${urlSlug(food.name)}`"
         class="link d-flex justify-center items-center flex-column ma-2" cols="12" md="4">
         <v-col>
           <v-card elevation="0" class="recipe-card pa-6 rounded-xl">
